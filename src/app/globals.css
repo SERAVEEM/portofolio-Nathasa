@@ -1,0 +1,595 @@
+:root {
+  --bg-primary: #FFF9F3;
+  --color-primary: #814545;
+  --color-primary-muted: rgba(129, 69, 69, 0.6);
+  --color-primary-light: rgba(129, 69, 69, 0.08);
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--bg-primary);
+  color: var(--color-primary);
+  font-family: var(--font-poppins);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ================= DESKTOP FLUID HERO (NODE 37:20) ================= */
+.desktop-hero-container {
+  width: 100%;
+  height: 100dvh;
+  min-height: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 clamp(24px, 8.97vw, 155px);
+  max-width: 1728px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* 1. Perfectly aligned navbar matching bilateral grid guidelines */
+.hero-header-desktop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: clamp(28px, 6.5vh, 60px);
+  position: relative;
+  z-index: 25;
+}
+
+.hero-nav-line {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 16px;
+  line-height: 0;
+}
+
+.hero-nav-line.left {
+  justify-content: flex-end;
+}
+
+.hero-nav-line.right {
+  justify-content: flex-start;
+}
+
+.nav-line-bar {
+  height: 1px;
+  background-color: var(--color-primary);
+  flex: 1;
+  opacity: 0.8;
+}
+
+.nav-line-diamond {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-primary);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.hero-nav-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(48px, 9.4vw, 163px);
+  flex-shrink: 0;
+}
+
+.nav-item-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-poppins);
+  font-size: clamp(16px, 1.1vw, 20px);
+  font-weight: 500;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 4px 0;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-item-btn:hover {
+  opacity: 0.7;
+}
+
+.nav-item-btn.active {
+  font-weight: 500;
+}
+
+/* 2. Hero stage: bottom-anchored photo + pure code Bebas Neue + bilateral content */
+.hero-stage-desktop {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* Dual-layer Bebas Neue title (back solid, front outline) */
+.portfolio-title-stage {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: clamp(34%, 38vh, 40%);
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.portfolio-title-stage.back {
+  z-index: 1;
+}
+
+.portfolio-title-stage.front {
+  z-index: 3;
+}
+
+.portfolio-svg-layer {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+/* Photo anchored to the bottom edge like Figma node 37:21 */
+.hero-photo-wrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: auto;
+  height: clamp(750px, 108vh, 1175px);
+  aspect-ratio: 1897 / 1067;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  pointer-events: none;
+}
+
+/* Bilateral columns (anchored flush with left and right page guidelines) */
+.hero-column-left {
+  position: absolute;
+  left: 0;
+  bottom: clamp(32px, 5.5vh, 64px);
+  width: clamp(280px, 28vw, 450px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.hero-column-right {
+  position: absolute;
+  right: 0;
+  bottom: clamp(32px, 5.5vh, 64px);
+  width: clamp(280px, 28vw, 450px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: right;
+  z-index: 10;
+}
+
+.hero-col-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: clamp(36px, 6vh, 68px);
+}
+
+.hero-column-right .hero-col-main {
+  align-items: flex-end;
+}
+
+.hero-description {
+  font-family: var(--font-poppins);
+  font-size: clamp(14px, 1.1vw, 18px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--color-primary-muted);
+  margin-bottom: clamp(16px, 2.2vh, 26px);
+  max-width: 440px;
+}
+
+.hero-description.right {
+  text-align: right;
+}
+
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(10px, 1.2vh, 14px) clamp(28px, 2vw, 36px);
+  border-radius: 9999px;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: var(--bg-primary);
+  font-family: var(--font-poppins);
+  font-size: clamp(15px, 1.1vw, 18px);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.hero-btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(10px, 1.2vh, 14px) clamp(28px, 2vw, 36px);
+  border-radius: 9999px;
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-family: var(--font-poppins);
+  font-size: clamp(15px, 1.1vw, 18px);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-btn-secondary:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-1px);
+}
+
+.hero-author-desktop {
+  font-family: var(--font-poppins);
+  font-size: clamp(15px, 1.1vw, 18px);
+  font-weight: 500;
+  color: var(--color-primary);
+  white-space: nowrap;
+  line-height: 1;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-socials-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  line-height: 1;
+  min-height: 32px;
+}
+
+.social-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon-btn:hover {
+  opacity: 0.65;
+  transform: translateY(-1px);
+}
+
+/* ================= MOBILE VIEW (NODE 14:28 & 46:182) ================= */
+.mobile-wrapper {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .desktop-hero-container {
+    display: none;
+  }
+
+  .mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    background-color: var(--bg-primary);
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 32px;
+  }
+
+  .mobile-topbar {
+    position: absolute;
+    top: 20px;
+    left: 18px;
+    z-index: 35;
+  }
+
+  .menu-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Slide-over Drawer */
+  .mobile-drawer-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .mobile-drawer-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 297px;
+    max-width: 80vw;
+    background-color: #FFFFFF;
+    z-index: 60;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 28px 32px;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.08);
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .mobile-drawer.open {
+    transform: translateX(0);
+  }
+
+  .drawer-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 32px;
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .drawer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .drawer-link-btn {
+    background: none;
+    border: none;
+    font-family: var(--font-poppins);
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--color-primary-muted);
+    cursor: pointer;
+    transition: color 0.2s;
+    text-align: left;
+    padding: 4px 0;
+  }
+
+  .drawer-link-btn.active,
+  .drawer-link-btn:hover {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .drawer-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-primary-light);
+  }
+
+  .drawer-author {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-primary);
+  }
+
+  .drawer-socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Mobile Stage matching Figma 14:28 */
+  .hero-stage-mobile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .hero-photo-mobile {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 960px;
+    height: 540px;
+    max-width: none;
+    object-fit: cover;
+    object-position: center 20%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .portfolio-text-mobile {
+    position: relative;
+    z-index: 2;
+    margin-top: clamp(230px, 34vh, 280px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .mobile-word-svg {
+    width: clamp(280px, 82vw, 320px);
+    height: auto;
+    display: block;
+    overflow: visible;
+  }
+
+  .mobile-word-svg:last-child {
+    margin-top: -10px;
+  }
+
+  .hero-details-mobile {
+    position: relative;
+    z-index: 5;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 320px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-bio-mobile {
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--color-primary-muted);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .hero-actions-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .btn-primary-mobile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6.65px 17.75px;
+    background-color: var(--color-primary);
+    color: var(--bg-primary);
+    border: 0.55px solid var(--color-primary);
+    border-radius: 17.75px;
+    font-family: var(--font-poppins);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .btn-primary-mobile:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary-mobile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6.65px 17.75px;
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 0.55px solid var(--color-primary);
+    border-radius: 17.75px;
+    font-family: var(--font-poppins);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .btn-secondary-mobile:hover {
+    background-color: var(--color-primary-light);
+    transform: translateY(-1px);
+  }
+
+  .hero-footer-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .author-name-mobile {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--color-primary);
+  }
+
+  .social-links-mobile {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+}
