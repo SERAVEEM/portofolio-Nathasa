@@ -1,9 +1,17 @@
-import type { Metadata} from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-export const metadata : Metadata = {
-  title: "Nathasa Bintang  Kayesa | portofolio",
-  description : "personal Portfolio of Nathasa Bintang Kayesa - Computer Science student at BINUS university ",
+export const metadata: Metadata = {
+  title: "Nathasa — Digital Product & UI/UX Designer Portfolio",
+  description: "Modern dark & wine-maroon portfolio showcasing featured digital product design projects, career experience, achievements, and tools.",
+  keywords: ["Nathasa", "Portfolio", "UI/UX Designer", "Product Designer", "Design Systems"],
+  authors: [{ name: "Nathasa" }],
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
@@ -12,18 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
-      <head> 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-          rel="stylesheet" 
-          />
-        </head> 
-        <body suppressHydrationWarning>
-          {children}
-        </body> 
+    <html lang="en">
+      <body suppressHydrationWarning>
+        <div className="ambient-glow-1" aria-hidden="true" />
+        <div className="ambient-glow-2" aria-hidden="true" />
+        <div className="ambient-glow-3" aria-hidden="true" />
+        <div className="grid-pattern" aria-hidden="true" />
+        {children}
+      </body>
     </html>
   );
 }

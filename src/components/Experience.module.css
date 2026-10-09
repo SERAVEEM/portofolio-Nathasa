@@ -1,0 +1,173 @@
+.timelineContainer {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 36px;
+}
+
+.timelineRail {
+  position: absolute;
+  top: 10px;
+  bottom: 20px;
+  left: 10px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--maroon-500) 0%, rgba(168, 28, 71, 0.2) 100%);
+  box-shadow: 0 0 10px rgba(224, 49, 90, 0.4);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineNode {
+  position: absolute;
+  left: -32px;
+  top: 24px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--maroon-400);
+  border: 3px solid #08070a;
+  box-shadow: 0 0 12px 2px rgba(224, 49, 90, 0.8);
+  transition: transform 0.25s ease;
+}
+
+.timelineItem:hover .timelineNode {
+  transform: scale(1.3);
+  background: #fff;
+}
+
+.timelineCard {
+  background: rgba(16, 12, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.timelineCard:hover {
+  border-color: rgba(224, 49, 90, 0.45);
+  transform: translateX(6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(168, 28, 71, 0.2);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.roleTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.companyRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.companyName {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--maroon-300);
+}
+
+.locationText {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.periodBadge {
+  padding: 6px 14px;
+  background: rgba(168, 28, 71, 0.15);
+  border: 1px solid rgba(224, 49, 90, 0.3);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.itemDesc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.bulletsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.bulletDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--maroon-400);
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.skillsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.skillPill {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .timelineContainer {
+    padding-left: 24px;
+  }
+  .timelineRail {
+    left: 4px;
+  }
+  .timelineNode {
+    left: -24px;
+  }
+  .timelineCard {
+    padding: 20px;
+  }
+  .cardTop {
+    flex-direction: column;
+  }
+}

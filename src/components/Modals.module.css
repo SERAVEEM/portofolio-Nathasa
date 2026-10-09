@@ -1,0 +1,305 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 4, 7, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modalContent {
+  background: rgba(16, 12, 20, 0.95);
+  border: 1px solid rgba(224, 49, 90, 0.35);
+  border-radius: 28px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(168, 28, 71, 0.3);
+  animation: modalScale 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 36px;
+}
+
+@keyframes modalScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.closeBtn:hover {
+  background: rgba(224, 49, 90, 0.2);
+  color: #fff;
+  border-color: rgba(224, 49, 90, 0.5);
+  transform: rotate(90deg);
+}
+
+/* CV Modal Specifics */
+.cvHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 24px;
+}
+
+.cvCandidateName {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.cvCandidateRole {
+  font-size: 0.95rem;
+  color: var(--maroon-300);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.cvDownloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--maroon-500) 0%, var(--maroon-700) 100%);
+  border: 1px solid rgba(244, 63, 94, 0.4);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cvDownloadBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(224, 49, 90, 0.6);
+}
+
+.cvSection {
+  margin-bottom: 24px;
+}
+
+.cvSectionTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cvText {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.cvHighlightBox {
+  background: rgba(168, 28, 71, 0.1);
+  border: 1px solid rgba(224, 49, 90, 0.2);
+  border-radius: 14px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .cvHighlightBox {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cvHighlightItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.cvHighlightLabel {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.cvHighlightValue {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Project Modal Specifics */
+.projectModalBanner {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projectModalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projectMetaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.projectCategoryTag {
+  padding: 6px 14px;
+  background: rgba(168, 28, 71, 0.2);
+  border: 1px solid rgba(224, 49, 90, 0.35);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--maroon-300);
+}
+
+.modalStatusNote {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background: rgba(224, 49, 90, 0.15);
+  border: 1px solid rgba(224, 49, 90, 0.4);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fda4af;
+  margin-bottom: 12px;
+}
+
+.projectModalTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.projectTagline {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.projectStoryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 680px) {
+  .projectStoryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.storyCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.storyTitle {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.storyDesc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Toast Styles */
+.toastWrapper {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 200;
+  animation: toastSlide 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes toastSlide {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.toastBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  background: rgba(20, 14, 24, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(224, 49, 90, 0.5);
+  border-radius: var(--radius-full);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(224, 49, 90, 0.4);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.toastIcon {
+  color: #22c55e;
+  display: flex;
+}
