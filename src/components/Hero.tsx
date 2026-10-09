@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './Hero.module.css';
 import { DownloadIcon, ArrowRightIcon, LinkedinIcon, InstagramIcon, MailIcon, StarIcon, SparklesIcon } from './Icons';
+import { getAssetPath } from '@/data/portfolioData';
 
 interface HeroProps {
   onOpenCvModal: () => void;
@@ -52,7 +53,7 @@ export default function Hero({ onOpenCvModal, onCopyEmail }: HeroProps) {
             <span className={styles.socialLabel}>Connect:</span>
             
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/nathasa-bintang-kayesa-0b2891325/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialPill}
@@ -63,7 +64,7 @@ export default function Hero({ onOpenCvModal, onCopyEmail }: HeroProps) {
             </a>
 
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/nathasa.kayezz?rpxt=MTRxb25iaHFqenI2OA==/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialPill}
@@ -98,7 +99,7 @@ export default function Hero({ onOpenCvModal, onCopyEmail }: HeroProps) {
 
             <div className={styles.imageFrame}>
               <Image
-                src="/nathasa-avatar.jpg"
+                src={getAssetPath("/nathasa-avatar.jpg")}
                 alt="Nathasa - Digital Product Designer"
                 width={500}
                 height={500}

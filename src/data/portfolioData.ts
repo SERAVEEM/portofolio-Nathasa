@@ -1,5 +1,14 @@
 export type ProjectCategory = 'Cybersecurity' | 'UI/UX Design' | 'Product & Management';
 
+export const BASE_PATH = "/portfolio-Nathasa";
+
+export function getAssetPath(path: string): string {
+  if (!path) return path;
+  if (path.startsWith("http://") || path.startsWith("https://")) return path;
+  const clean = path.startsWith("/") ? path : `/${path}`;
+  return `${BASE_PATH}${clean}`;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -60,7 +69,7 @@ export const PROJECTS_DATA: Project[] = [
     challenge: "Conduct a black-box/gray-box penetration test of OWASP Juice Shop in an isolated lab environment using Kali Linux, VMware, and Docker. The main challenge was identifying and validating web application vulnerabilities based on the OWASP Top 10 (2021) and WSTG, while gathering reliable evidence for each finding.",
     solution: "Performed structured vulnerability testing using Burp Suite, supported by curl, jq, Hashcat, and jwt.io. Identified and validated four vulnerabilities: SQL Injection (Critical, 9.8), IDOR (High, 9.1), Password Hash Disclosure (High, 8.1), and DOM-based XSS (Medium-High, 6.1). Documented each finding with evidence, root cause, and remediation recommendations in a formal security report, alongside a separate testing journal documenting the methodology and technical challenges.",
     year: "2025",
-    image: "/01_juiceshop.png",
+    image: getAssetPath("/01_juiceshop.png"),
     tools: ["Burp Suite", "OWASP Top 10", "SQL Injection", "XSS", "IDOR", "CVSS", "OWASP WSTG", "Hashcat"],
     metrics: ["4 Validated Vulnerabilities", "CVSS 9.8 Critical SQLi", "Comprehensive Security Report"],
     githubUrl: "https://github.com/Athyre/juice-shop-pentest"
@@ -75,7 +84,7 @@ export const PROJECTS_DATA: Project[] = [
     challenge: "Identify and exploit vulnerabilities across authentication, session management, input validation, access control, and request handling within a controlled lab environment (Windows host running XAMPP + Kali Linux VM via VMware). Each vulnerability required active exploitation with documented evidence, followed by a verified fix that did not break existing functionality.",
     solution: "Hardened the PHP application against all eight vulnerabilities using prepared statements, password hashing, secure sessions, CSRF protection, rate limiting, output encoding, generic error handling, and server-side authorization checks. Each vulnerability was exploited with Burp Suite, remediated, and successfully retested with documented evidence.",
     year: "2025",
-    image: "/02_securevuln.png",
+    image: getAssetPath("/02_securevuln.png"),
     tools: ["PHP", "Web Security", "OWASP Top 10", "SQL Injection", "XSS", "CSRF", "Burp Suite", "Penetration Testing"],
     metrics: ["8 Vulnerabilities Patched", "Zero Regressions", "End-to-End Retest Verified"],
     githubUrl: "https://github.com/Athyre/php-login-vuln-vs-secure"
@@ -91,7 +100,7 @@ export const PROJECTS_DATA: Project[] = [
     challenge: "Construct an automated test generator for diverse QR phishing payloads to systematically benchmark scanning applications, evaluating scanner preview safety, redirection tracking, and heuristic detection against cloaked URLs.",
     solution: "Developed an empirical testing framework and dataset generator evaluating mobile QR scanners against obfuscated URLs and social engineering lures. Uncovered critical preview blindspots and authored a structured research paper detailing vulnerability patterns and defense recommendations.",
     year: "2025",
-    image: "/03_icoris.png",
+    image: getAssetPath("/03_icoris.png"),
     tools: ["Mobile Security", "Quishing Analysis", "QR Heuristics", "Phishing Simulation", "Empirical Research"],
     metrics: ["Status: Accepted & Awaiting Publication", "Multi-Scanner Benchmark", "Published Research"],
     githubUrl: "https://github.com/Hyphen-14/QR-Phishing-Example-Generator-for-Scanner-App-Testing-/tree/main/Result"
@@ -107,7 +116,7 @@ export const PROJECTS_DATA: Project[] = [
     challenge: "Jobseekers struggle with excessive requirements, rigid filters, scattered job listings, and unclear recruitment processes, while recruiters face hundreds of applications and difficulty identifying promising candidates.",
     solution: "Designed an integrated recruitment platform with transparent hiring status, career roadmap guidance, and AI-powered talent discovery to improve hiring transparency, help jobseekers develop relevant skills, and help recruiters discover potential candidates beyond conventional filters.",
     year: "2024",
-    image: "/04_talentconnect.png",
+    image: getAssetPath("/04_talentconnect.png"),
     tools: ["Figma", "Design Thinking", "User Research", "User Persona", "User Journey", "Prototyping"],
     metrics: ["FIND IT 1st Place Winner", "Full Design System", "High-Fidelity Interactive Prototype"]
   },
@@ -121,7 +130,7 @@ export const PROJECTS_DATA: Project[] = [
     challenge: "Many animal shelters still rely on manual records, unstructured spreadsheets, and memory, resulting in lost information, poor health monitoring, and difficulties managing daily shelter operations.",
     solution: "Designed and coordinated the development of a centralized shelter management system with digital health records, care reminders, contact tracing, caretaker task management, and a public adoption platform to organize shelter operations and improve animal health monitoring.",
     year: "2024",
-    image: "/05_sheltertrack.png",
+    image: getAssetPath("/05_sheltertrack.png"),
     tools: ["Product Design", "UI/UX Design", "Project Management", "User Flow", "User Stories"],
     metrics: ["All-in-One Shelter Operations", "Digital Health Records", "Full Public Adoption Portal"]
   },
@@ -135,7 +144,7 @@ export const PROJECTS_DATA: Project[] = [
     challenge: "New parents often face difficulties finding reliable parenting information and managing various parenting needs, from learning about childcare to keeping track of vaccinations and finding essential parenting products.",
     solution: "Designed an integrated parenting platform featuring parenting articles, educational videos, a parenting marketplace, and vaccination tracking to provide parents with accessible resources and practical tools throughout their parenting journey.",
     year: "2024",
-    image: "/06_parenthink.png",
+    image: getAssetPath("/06_parenthink.png"),
     tools: ["Figma", "UI/UX Design", "User Research", "User Flow", "Prototyping", "Product Design"],
     metrics: ["End-to-End Vaccination Tracker", "Parenting Resource Library", "Curated Marketplace"]
   },
@@ -149,7 +158,7 @@ export const PROJECTS_DATA: Project[] = [
     challenge: "Identify security weaknesses in a real-world mobile application while mapping the attack surface, validating vulnerabilities through controlled exploitation, and assessing their potential impact using established security standards.",
     solution: "Performed APK decompilation, traffic interception, API endpoint testing, and vulnerability assessment, identifying five vulnerabilities including WebView injection, OTP brute force, cleartext traffic, hardcoded API keys, and information disclosure. Findings were evaluated using OWASP MASTG and CVSS v3.1, with mitigation recommendations provided for each vulnerability.",
     year: "2024",
-    image: "/project-1.jpg",
+    image: getAssetPath("/project-1.jpg"),
     tools: ["Mobile Penetration Testing", "JADX", "Burp Suite", "Frida", "Android Emulator", "API Security Testing", "OWASP MASTG"],
     metrics: ["5 Vulnerabilities Uncovered", "OWASP MASTG Compliant", "CVSS v3.1 Impact Scored"]
   },
@@ -163,7 +172,7 @@ export const PROJECTS_DATA: Project[] = [
     challenge: "Identify potential threats across critical e-commerce workflows, map them to STRIDE categories, assess their potential impact, and validate a high-risk authentication vulnerability through a controlled security testing environment.",
     solution: "Mapped security threats including Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege, then demonstrated authentication bypass through SQL Injection on the login feature using Burp Suite. Proposed prioritized mitigations including parameterized queries, server-side validation, rate limiting, MFA, secure logging, and WAF protection.",
     year: "2024",
-    image: "/project-2.jpg",
+    image: getAssetPath("/project-2.jpg"),
     tools: ["STRIDE", "Threat Modelling", "OWASP Juice Shop", "Burp Suite", "SQL Injection", "Web Security"],
     metrics: ["6 STRIDE Categories Evaluated", "Auth Bypass Demonstrated", "Hardened WAF & Query Policies"],
     githubUrl: "https://github.com/Athyre/ecommerce-security-threat-modeling-sqli"
@@ -179,7 +188,7 @@ export const PROJECTS_DATA: Project[] = [
     challenge: "Extract and interpret fragmented evidentiary data across NTFS filesystems and memory dumps while guaranteeing digital integrity and evidentiary validity.",
     solution: "Employed forensic frameworks to parse master file tables, correlate prefetch artifacts, and analyze network traces, delivering a comprehensive timeline analysis report.",
     year: "2024",
-    image: "/project-3.jpg",
+    image: getAssetPath("/project-3.jpg"),
     tools: ["Digital Forensics", "Autopsy", "FTK Imager", "Volatility", "Incident Response", "Artifact Analysis"],
     metrics: ["Timeline Reconstruction", "Chain of Custody Preserved", "Detailed Incident Report"]
   },
@@ -193,7 +202,7 @@ export const PROJECTS_DATA: Project[] = [
     challenge: "Balancing ambitious feature scopes with technical feasibility while establishing cohesive cross-functional team cadence across design and development.",
     solution: "Defined structured Product Requirement Documents (PRDs), agile sprint cadences, and iterative user validation sessions that accelerated delivery velocity.",
     year: "2024",
-    image: "/project-4.jpg",
+    image: getAssetPath("/project-4.jpg"),
     tools: ["Product Strategy", "Project Management", "Roadmapping", "Agile", "User Feedback"],
     metrics: ["Sprint Velocity Optimized", "PRD Specification Drafted", "Iterative Team Alignment"]
   },
@@ -207,7 +216,7 @@ export const PROJECTS_DATA: Project[] = [
     challenge: "During accidents or natural disasters, people may struggle to determine where to evacuate and which route is safest, especially when they are under pressure and have limited information about nearby evacuation locations.",
     solution: "Designed an emergency response application centered around an interactive evacuation map, allowing users to identify nearby evacuation points and receive directions to reach them. The application aims to simplify emergency navigation and help users make faster evacuation decisions during critical situations.",
     year: "2024",
-    image: "/11_findit.png",
+    image: getAssetPath("/11_findit.png"),
     tools: ["Figma", "User Research", "User Flow", "Prototyping", "Design Systems"],
     metrics: ["Interactive Safe-Zone Map", "Rapid Emergency Navigation", "Stress-Resilient Interface"]
   },
@@ -221,7 +230,7 @@ export const PROJECTS_DATA: Project[] = [
     challenge: "Translating intricate technical and security constraints into prioritized user stories without impacting feature velocity or delivery milestones.",
     solution: "Orchestrated backlog grooming, established architectural acceptance criteria, and facilitated cross-team communications between designers, security analysts, and developers.",
     year: "2024",
-    image: "/project-6.jpg",
+    image: getAssetPath("/project-6.jpg"),
     tools: ["Technical Product Management", "Sprint Planning", "Jira", "System Architecture", "Security Backlog"],
     metrics: ["Clear Engineering Backlog", "Security Guardrails Met", "Seamless Cross-Functional Handoff"]
   }
