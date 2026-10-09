@@ -1,6 +1,6 @@
 export type ProjectCategory = 'Cybersecurity' | 'UI/UX Design' | 'Product & Management';
 
-export const BASE_PATH = "/portfolio-Nathasa";
+export const BASE_PATH = "/portofolio-Nathasa";
 
 export function getAssetPath(path: string): string {
   if (!path) return path;
