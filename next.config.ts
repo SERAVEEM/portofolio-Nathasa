@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   basePath: "/portfolio-Nathasa",
   images: {
     unoptimized: true,
+    
   },
 };
 
