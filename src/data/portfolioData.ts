@@ -179,18 +179,18 @@ export const PROJECTS_DATA: Project[] = [
   },
   {
     id: "project-9",
-    title: "Digital Forensics & Incident Investigation",
+    title: "Computer Forensics: Seven-Lab Disk Image Case Study",
     category: "Cybersecurity",
     statusNote: "Security Lab",
-    tagline: "Filesystem artifact recovery, memory inspection, and structured digital evidence correlation.",
-    description: "Hands-on digital forensic analysis reconstructing attack timelines, file activity, and preserving chain of custody.",
-    fullOverview: "Conducted forensic examinations focusing on digital artifact extraction, volatile memory analysis, and log correlation to reconstruct breach sequences and identify unauthorized intrusion indicators.",
-    challenge: "Extract and interpret fragmented evidentiary data across NTFS filesystems and memory dumps while guaranteeing digital integrity and evidentiary validity.",
-    solution: "Employed forensic frameworks to parse master file tables, correlate prefetch artifacts, and analyze network traces, delivering a comprehensive timeline analysis report.",
+    tagline: "Seven labs. One disk image. From evidence preservation to reconstructing user activity.",
+    description: "Systematic computer forensics case study analyzing a single disk image across hashing, forensic acquisition, deleted file recovery, and artifact correlation.",
+    fullOverview: "Conducted a comprehensive seven-lab computer forensics investigation on a single disk image. Validated evidentiary integrity through cryptographic hashing, preserved chain of custody, and reconstructed complete user timelines across filesystem artifacts, email archives, web history, and shortcut files.",
+    challenge: "Preserve evidentiary integrity and chain of custody while systematically analyzing a forensic disk image to uncover deleted files, email communications, browser traces, and Windows shortcut artifacts under rigorous forensic standards.",
+    solution: "Executed seven structured forensic labs: validated disk image integrity with cryptographic hashing (Lab 1), completed bit-stream forensic acquisition (Lab 2), recovered deleted files (Lab 3), inspected email communications and headers (Lab 4), analyzed internet browsing history and cache (Lab 5), extracted Recycle Bin metadata (Lab 6), and decoded LNK shortcut files (Lab 7) to correlate user timelines and actions.",
     year: "2024",
-    image: getAssetPath("/project-3.jpg"),
-    tools: ["Digital Forensics", "Autopsy", "FTK Imager", "Volatility", "Incident Response", "Artifact Analysis"],
-    metrics: ["Timeline Reconstruction", "Chain of Custody Preserved", "Detailed Incident Report"]
+    image: getAssetPath("/09_forensics.png"),
+    tools: ["Computer Forensics", "FTK Imager", "Autopsy", "Disk Imaging", "Cryptographic Hashing", "Artifact Analysis", "Evidence Preservation"],
+    metrics: ["7 Forensic Labs Completed", "1 Disk Image Reconstructed", "Chain of Custody Preserved"]
   },
   {
     id: "project-11",
