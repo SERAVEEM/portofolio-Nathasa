@@ -16,8 +16,7 @@ export default function Projects({ onSelectProject }: ProjectsProps) {
   const categories: ('All' | ProjectCategory)[] = [
     'All',
     'Cybersecurity',
-    'UI/UX Design',
-    'Product & Management'
+    'UI/UX Design'
   ];
 
   const filteredProjects = activeCategory === 'All'

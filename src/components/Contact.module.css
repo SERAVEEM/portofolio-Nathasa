@@ -202,15 +202,3 @@
   border-color: var(--maroon-400);
   color: #fff;
 }
-
-/* Handwritten Cursive Flourish (Directly inspired by Fresh Wave reference) */
-.handwrittenFlourish {
-  font-family: var(--font-script);
-  font-size: 1.85rem;
-  color: #fda4af;
-  text-align: right;
-  margin-top: 10px;
-  transform: rotate(-3deg);
-  text-shadow: 0 0 15px rgba(224, 49, 90, 0.5);
-  user-select: none;
-}

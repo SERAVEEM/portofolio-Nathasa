@@ -1,4 +1,4 @@
-export type ProjectCategory = 'Cybersecurity' | 'UI/UX Design' | 'Product & Management';
+export type ProjectCategory = 'Cybersecurity' | 'UI/UX Design';
 
 export const BASE_PATH = "/portofolio-Nathasa";
 
@@ -193,20 +193,6 @@ export const PROJECTS_DATA: Project[] = [
     metrics: ["Timeline Reconstruction", "Chain of Custody Preserved", "Detailed Incident Report"]
   },
   {
-    id: "project-10",
-    title: "Pioneer — Strategic Initiative Framework",
-    category: "Product & Management",
-    tagline: "Cross-functional roadmap development, stakeholder alignment, and product execution framework.",
-    description: "Exploratory product framework coordinating team sprints, scoping feature roadmaps, and validating problem discovery.",
-    fullOverview: "Spearheaded the Pioneer product exploration initiative, aligning engineering capabilities and user requirements to establish rapid execution milestones and validate key product assumptions.",
-    challenge: "Balancing ambitious feature scopes with technical feasibility while establishing cohesive cross-functional team cadence across design and development.",
-    solution: "Defined structured Product Requirement Documents (PRDs), agile sprint cadences, and iterative user validation sessions that accelerated delivery velocity.",
-    year: "2024",
-    image: getAssetPath("/project-4.jpg"),
-    tools: ["Product Strategy", "Project Management", "Roadmapping", "Agile", "User Feedback"],
-    metrics: ["Sprint Velocity Optimized", "PRD Specification Drafted", "Iterative Team Alignment"]
-  },
-  {
     id: "project-11",
     title: "FindIt: Emergency Response & Evacuation App",
     category: "UI/UX Design",
@@ -219,20 +205,6 @@ export const PROJECTS_DATA: Project[] = [
     image: getAssetPath("/11_findit.png"),
     tools: ["Figma", "User Research", "User Flow", "Prototyping", "Design Systems"],
     metrics: ["Interactive Safe-Zone Map", "Rapid Emergency Navigation", "Stress-Resilient Interface"]
-  },
-  {
-    id: "project-12",
-    title: "TPM — Technical Product Management",
-    category: "Product & Management",
-    tagline: "Bridging software architecture, security assurance, and agile delivery lifecycles.",
-    description: "Technical product management framework aligning product backlog prioritization, developer specifications, and release governance.",
-    fullOverview: "Implemented technical product management frameworks bridging engineering execution, security compliance requirements, and product roadmap delivery.",
-    challenge: "Translating intricate technical and security constraints into prioritized user stories without impacting feature velocity or delivery milestones.",
-    solution: "Orchestrated backlog grooming, established architectural acceptance criteria, and facilitated cross-team communications between designers, security analysts, and developers.",
-    year: "2024",
-    image: getAssetPath("/project-6.jpg"),
-    tools: ["Technical Product Management", "Sprint Planning", "Jira", "System Architecture", "Security Backlog"],
-    metrics: ["Clear Engineering Backlog", "Security Guardrails Met", "Seamless Cross-Functional Handoff"]
   }
 ];
 

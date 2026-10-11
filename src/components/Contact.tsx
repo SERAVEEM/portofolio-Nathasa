@@ -125,11 +125,6 @@ export default function Contact({ onOpenCvModal, onCopyEmail }: ContactProps) {
                   <ExternalLinkIcon />
                 </div>
               </a>
-
-              {/* Handwritten script flourish (Directly inspired by Fresh Wave's "Juntos vamos mais longe!") */}
-              <div className={styles.handwrittenFlourish}>
-                Juntos vamos mais longe ✨
-              </div>
             </div>
           </div>
         </div>
