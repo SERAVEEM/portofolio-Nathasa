@@ -36,45 +36,24 @@ export default function Home() {
 
   const handleDownloadCv = () => {
     showToast("Downloading Nathasa's CV (PDF)...");
-    
-    // Create an inline downloadable dummy CV file
-    const element = document.createElement("a");
-    const file = new Blob(
-      [
-        `NATHASA — DIGITAL PRODUCT & UI/UX DESIGNER\n` +
-        `Contact: nathasakayesaa@gmail.com | LinkedIn: https://linkedin.com\n\n` +
-        `EXECUTIVE SUMMARY\n` +
-        `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.\n\n` +
-        `EXPERIENCE HIGHLIGHTS\n` +
-        `- Chief Financial Officer at Bina Nusantara Computer Club (BNCC) (2026 - Present)\n` +
-        `- Manager of Creative and Design at HIMTI BINUS University (2026 - Present)\n` +
-        `- Coordinator of Design & Documentation (TechnoScape 2026, DIGIFEST 2025, SESVENT 2025)\n` +
-        `- UI/UX Trainer & TPM at BNCC (2025 - 2026)\n` +
-        `- Freshmen Partner & Leader (FYP B29) at BINUS University (2025 - 2026)\n\n` +
-        `KEY ACHIEVEMENTS\n` +
-        `- 1st Place Winner FIND IT UI/UX Competition\n` +
-        `- Empirical Research on QR Scanners vs Quishing (Accepted for Publication)\n` +
-        `- BNCC UI/UX Trainer Praetorian Certificate`
-      ],
-      { type: "text/plain" }
-    );
-    element.href = URL.createObjectURL(file);
-    element.download = "Nathasa_Portfolio_CV.txt";
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    const link = document.createElement("a");
+    link.href = `${process.env.NEXT_PUBLIC_BASE_PATH || '/portofolio-Nathasa'}/CV_Nathasa_Bintang_Kayesa.pdf`;
+    link.download = "CV_Nathasa_Bintang_Kayesa.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
     <>
       <Navbar
-        onOpenCvModal={() => setIsCvModalOpen(true)}
+        onOpenCvModal={handleDownloadCv}
         onCopyEmail={handleCopyEmail}
       />
 
       <main>
         <Hero
-          onOpenCvModal={() => setIsCvModalOpen(true)}
+          onOpenCvModal={handleDownloadCv}
           onCopyEmail={handleCopyEmail}
         />
 
@@ -89,7 +68,7 @@ export default function Home() {
         <Tools />
 
         <Contact
-          onOpenCvModal={() => setIsCvModalOpen(true)}
+          onOpenCvModal={handleDownloadCv}
           onCopyEmail={handleCopyEmail}
         />
       </main>

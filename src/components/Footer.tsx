@@ -19,7 +19,7 @@ export default function Footer({ onCopyEmail }: FooterProps) {
         <div className={styles.footerBrand}>
           <div className={styles.logoMonogram}>N</div>
           <span className={styles.footerText}>
-            © 2026 Nathasa. All rights reserved. Designed with modern dark aesthetic.
+            © 2026 Nathasa. All rights reserved.
           </span>
         </div>
 

@@ -27,8 +27,8 @@ export default function CvModal({ isOpen, onClose, onDownload }: CvModalProps) {
 
         <div className={styles.cvHeader}>
           <div>
-            <h2 className={styles.cvCandidateName}>Nathasa</h2>
-            <p className={styles.cvCandidateRole}>Senior Digital Product & UI/UX Designer</p>
+            <h2 className={styles.cvCandidateName}>Nathasa Bintang Kayesa</h2>
+            <p className={styles.cvCandidateRole}>Computer Science & Cybersecurity | UI/UX & Product</p>
           </div>
 
           <button
@@ -43,39 +43,40 @@ export default function CvModal({ isOpen, onClose, onDownload }: CvModalProps) {
 
         <div className={styles.cvHighlightBox}>
           <div className={styles.cvHighlightItem}>
-            <span className={styles.cvHighlightLabel}>Experience</span>
-            <span className={styles.cvHighlightValue}>5+ Years</span>
+            <span className={styles.cvHighlightLabel}>Education</span>
+            <span className={styles.cvHighlightValue}>BINUS University (GPA 3.86)</span>
           </div>
           <div className={styles.cvHighlightItem}>
-            <span className={styles.cvHighlightLabel}>Location</span>
-            <span className={styles.cvHighlightValue}>Available Globally / Remote</span>
+            <span className={styles.cvHighlightLabel}>Phone</span>
+            <span className={styles.cvHighlightValue}>+62 852-8394-9092</span>
           </div>
           <div className={styles.cvHighlightItem}>
-            <span className={styles.cvHighlightLabel}>Availability</span>
-            <span className={styles.cvHighlightValue}>Full-time / High Impact</span>
+            <span className={styles.cvHighlightLabel}>Email</span>
+            <span className={styles.cvHighlightValue}>nathasakayesaa@gmail.com</span>
           </div>
         </div>
 
         <div className={styles.cvSection}>
-          <h3 className={styles.cvSectionTitle}>Executive Summary</h3>
+          <h3 className={styles.cvSectionTitle}>Summary</h3>
           <p className={styles.cvText}>
-            Computer Science student with strong organizational leadership, UI/UX design, application security, and product management experience across Bina Nusantara Computer Club (BNCC) and HIMTI BINUS University.
+            Computer Science student at BINUS University with a strong interest in cybersecurity and technology. Experienced in organizational leadership and project coordination, with a proven ability to collaborate across teams, communicate effectively, and manage responsibilities in student organizations.
           </p>
         </div>
 
         <div className={styles.cvSection}>
-          <h3 className={styles.cvSectionTitle}>Core Competencies</h3>
+          <h3 className={styles.cvSectionTitle}>Technical Skills & Tools</h3>
           <p className={styles.cvText}>
-            • UI/UX Design & Prototyping (Figma) • Application Security & Penetration Testing • Technical Project Management • Cross-Functional Team Leadership • Financial Management & Event Operations
+            • <strong>Skills:</strong> Web Application Security Testing, Vulnerability Assessment, Mobile App Security Testing, Threat Modeling, Digital Forensics.<br />
+            • <strong>Tools:</strong> Burp Suite, Wireshark, Kali Linux, Docker, Android Studio, FTK Imager, MailView, Jira, Notion, Figma, FigJam.
           </p>
         </div>
 
         <div className={styles.cvSection}>
-          <h3 className={styles.cvSectionTitle}>Education & Affiliations</h3>
+          <h3 className={styles.cvSectionTitle}>Key Experience</h3>
           <p className={styles.cvText}>
-            • BINUS University — Computer Science (Malang, East Java)<br />
-            • Bina Nusantara Computer Club (BNCC) — Executive CFO & UI/UX Trainer<br />
-            • HIMTI BINUS University — Manager of Creative and Design
+            • <strong>Manager, Creative & Design</strong> — HIMTI BINUS@Malang (Mar 2026 - Present)<br />
+            • <strong>Chief Financial Officer</strong> — BNCC BINUS@Malang (Mar 2026 - Present)<br />
+            • <strong>UI/UX Educator</strong> — BNCC BINUS@Malang (Oct 2025 - Apr 2026)
           </p>
         </div>
       </div>

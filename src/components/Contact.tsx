@@ -26,11 +26,11 @@ export default function Contact({ onOpenCvModal, onCopyEmail }: ContactProps) {
               </div>
 
               <h2 className={styles.bannerTitle}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+                Have a project or opportunity in mind? Let&apos;s build together.
               </h2>
 
               <p className={styles.bannerDesc}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                Open for UI/UX design, cybersecurity testing, product management, and collaborative tech leadership. Feel free to reach out via email or connect on LinkedIn.
               </p>
 
               <div className={styles.buttonRow}>
