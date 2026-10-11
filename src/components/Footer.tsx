@@ -34,7 +34,7 @@ export default function Footer({ onCopyEmail }: FooterProps) {
             <LinkedinIcon />
           </a>
           <a
-            href="https://instagram.com/nathasa.kayezz?rpxt=MTRxb25iaHFqenI2OA==/"
+            href="https://www.instagram.com/nathasa.kayezz?rpxt=MTRxb25iaHFqenI2OA=="
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialBtn}

@@ -16,7 +16,7 @@ export default function Tools() {
           </div>
           <h2 className="section-title">Tools I Use</h2>
           <p className="section-subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.
+            Core software and platforms powering end-to-end design thinking, prototyping, application security testing, and digital forensics.
           </p>
         </div>
 

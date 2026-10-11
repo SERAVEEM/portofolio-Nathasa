@@ -27,7 +27,7 @@ export default function Home() {
   };
 
   const handleCopyEmail = () => {
-    const email = "nathasa.design@domain.com";
+    const email = "nathasakayesaa@gmail.com";
     if (navigator.clipboard) {
       navigator.clipboard.writeText(email);
     }
@@ -41,8 +41,8 @@ export default function Home() {
     const element = document.createElement("a");
     const file = new Blob(
       [
-        `NATHASA — SENIOR DIGITAL PRODUCT & UI/UX DESIGNER\n` +
-        `Contact: nathasa.design@domain.com | LinkedIn: https://linkedin.com\n\n` +
+        `NATHASA — DIGITAL PRODUCT & UI/UX DESIGNER\n` +
+        `Contact: nathasakayesaa@gmail.com | LinkedIn: https://linkedin.com\n\n` +
         `EXECUTIVE SUMMARY\n` +
         `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.\n\n` +
         `EXPERIENCE HIGHLIGHTS\n` +

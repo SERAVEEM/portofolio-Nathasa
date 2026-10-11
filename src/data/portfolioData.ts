@@ -405,84 +405,116 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
   }
 ];
 
+export interface StatItem {
+  number: string;
+  label: string;
+  description: string;
+}
+
+export const STATS_DATA: StatItem[] = [
+  {
+    number: "50+",
+    label: "Students Taught",
+    description: "Delivered 13 UI/UX teaching sessions, covering design fundamentals, Figma, and prototyping."
+  },
+  {
+    number: "5x",
+    label: "Design Coordinator",
+    description: "Hands-on lead who decided what needed to be built, prioritized the workload, and contributed directly to the design work."
+  },
+  {
+    number: "8",
+    label: "Vulnerabilities Exploited & Fixed",
+    description: "Built a vulnerable PHP login, exploited 8 OWASP Top 10 flaws with Burp Suite, then secured and retested each one."
+  },
+  {
+    number: "50+",
+    label: "CTF Challenges Solved",
+    description: "Solved challenges across CTF competitions, CyLab, and Hack The Box, spanning multiple security categories."
+  }
+];
+
 export const ACHIEVEMENTS_DATA: AchievementItem[] = [
   {
     id: "ach-1",
-    title: "Leader in Design Excellence",
-    organization: "Awwwards • Site of the Day Nominee",
-    year: "Spring 2025",
+    title: "ICORIS 2026 Paper Author",
+    organization: "10th Int. Conf. on Research and Innovation in Information Systems (2026)",
+    year: "2026",
     rating: 5,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Recognized for groundbreaking visual balance and micro-interactions.",
-    badge: "Top 1%"
+    description: "Co-authored a research paper on the comparative evaluation of real-world QR code scanners in detecting quishing (QR code phishing). The paper has been accepted for publication and is currently undergoing the publication process.",
+    badge: "Accepted Paper"
   },
   {
     id: "ach-2",
-    title: "Best Usability & Experience",
-    organization: "UX Design Awards Global",
-    year: "Winter 2024",
+    title: "UI/UX Design Trainer PRAETO",
+    organization: "BNCC (2025/2026)",
+    year: "2025/2026",
     rating: 5,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Honored for high-impact accessible fintech mobile flows.",
-    badge: "Winner"
+    description: "Delivered 13 UI/UX training sessions to more than 50 students in the Malang region, covering foundational design principles and practical UI/UX design skills.",
+    badge: "Design Trainer"
   },
   {
     id: "ach-3",
-    title: "Global Fintech Hackathon",
-    organization: "First Place • Digital Innovation",
-    year: "2023",
+    title: "2nd Place in Information System Festival FINDIT",
+    organization: "Universitas Kristen Satya Wacana (2025)",
+    year: "2025",
     rating: 5,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Created high-converting web3 dashboard experience in 48 hours.",
-    badge: "1st Place"
+    description: "Achieved second place in a UI/UX design competition by developing a user-centered solution to a given case study within an eight-hour challenge.",
+    badge: "2nd Place Winner"
   },
   {
     id: "ach-4",
-    title: "Certified UX Master (NN/g)",
-    organization: "Nielsen Norman Group Certification",
-    year: "2022",
+    title: "Dean’s List",
+    organization: "BINUS University • School of Computer Science (2025)",
+    year: "2025",
     rating: 5,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Advanced enterprise user research and usability metric evaluation.",
-    badge: "Verified"
+    description: "Recognized for outstanding academic performance by the School of Computer Science at BINUS University.",
+    badge: "Dean's List"
+  },
+  {
+    id: "ach-5",
+    title: "Appreciation Day Awardee",
+    organization: "BINUS University (2025)",
+    year: "2025",
+    rating: 5,
+    description: "Recognized at BINUS University’s Appreciation Day for achievements in competitions and contributions to student excellence.",
+    badge: "Awardee"
+  },
+  {
+    id: "ach-6",
+    title: "Business Idea Competition",
+    organization: "BINUS University (2025)",
+    year: "2025",
+    rating: 5,
+    description: "Participated in a campus-level business idea competition, developing and presenting an innovative business concept.",
+    badge: "Presenter"
   }
 ];
 
 export const TOOL_CATEGORIES: ToolCategory[] = [
   {
-    title: "Design & Prototyping",
-    subtitle: "Core UI/UX, Wireframing & Design Systems",
+    title: "UI/UX Design",
+    subtitle: "Product Design, Prototyping & Collaboration",
     tools: [
-      { name: "Figma", level: "Expert / Daily", iconEmoji: "🎨" },
-      { name: "Framer", level: "Advanced", iconEmoji: "⚡" },
-      { name: "FigJam", level: "Collaboration", iconEmoji: "📋" },
-      { name: "Adobe Illustrator", level: "Vector Art", iconEmoji: "✒️" }
+      { name: "Figma", level: "UI/UX & Prototyping", iconEmoji: "🎨" },
+      { name: "Figjam", level: "Brainstorming & User Flow", iconEmoji: "📋" },
+      { name: "Canva", level: "Visual Assets & Presentation", iconEmoji: "✨" },
+      { name: "Jira", level: "Agile & Sprint Tracking", iconEmoji: "🎯" },
+      { name: "Notion", level: "PRD & Documentation", iconEmoji: "📝" }
     ]
   },
   {
-    title: "Front-End & Architecture",
-    subtitle: "Component Systems & Modern Web Stacks",
+    title: "Cyber Security",
+    subtitle: "Penetration Testing, Forensic & Analysis",
     tools: [
-      { name: "Next.js & React", level: "Production", iconEmoji: "⚛️" },
-      { name: "TypeScript", level: "Strong", iconEmoji: "📘" },
-      { name: "CSS Modules & Vanilla", level: "Expert", iconEmoji: "💎" },
-      { name: "Git & GitHub", level: "Version Control", iconEmoji: "🐙" }
-    ]
-  },
-  {
-    title: "Motion & 3D Experience",
-    subtitle: "Visual Polish, Interactions & Spatial Design",
-    tools: [
-      { name: "Spline 3D", level: "Interactive 3D", iconEmoji: "🧊" },
-      { name: "After Effects", level: "Motion Timing", iconEmoji: "🎬" },
-      { name: "Lottie", level: "Web Animation", iconEmoji: "✨" },
-      { name: "Blender", level: "Asset Modeling", iconEmoji: "🍩" }
-    ]
-  },
-  {
-    title: "AI & Productivity",
-    subtitle: "Workflow Amplification & Ideation",
-    tools: [
-      { name: "Midjourney", level: "Visual Concepting", iconEmoji: "🌌" },
-      { name: "Cursor / Claude", level: "Daily Copilot", iconEmoji: "🤖" },
-      { name: "Notion", level: "Knowledge Base", iconEmoji: "📝" },
-      { name: "Linear / Jira", level: "Sprint Agile", iconEmoji: "🎯" }
+      { name: "Burp Suite", level: "Web App Security & Proxy", iconEmoji: "🛡️" },
+      { name: "Browser DevTools", level: "DOM & Network Inspection", iconEmoji: "🔍" },
+      { name: "Android Studio", level: "Mobile Security Testing", iconEmoji: "📱" },
+      { name: "Docker", level: "Isolated Lab Environments", iconEmoji: "🐳" },
+      { name: "Wireshark", level: "Packet & Protocol Analysis", iconEmoji: "🦈" },
+      { name: "Kali Linux", level: "Security OS & Tooling", iconEmoji: "🐉" },
+      { name: "FTK Imager", level: "Disk Image & Evidence Acquisition", iconEmoji: "💾" },
+      { name: "MailView", level: "Email & Header Forensics", iconEmoji: "✉️" }
     ]
   }
 ];

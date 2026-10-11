@@ -35,7 +35,7 @@ export default function Contact({ onOpenCvModal, onCopyEmail }: ContactProps) {
 
               <div className={styles.buttonRow}>
                 <a
-                  href="mailto:nathasa.design@domain.com"
+                  href="mailto:nathasakayesaa@gmail.com"
                   className={styles.directEmailBtn}
                 >
                   <span>Send an Email</span>
@@ -70,7 +70,7 @@ export default function Contact({ onOpenCvModal, onCopyEmail }: ContactProps) {
                   </div>
                   <div className={styles.channelInfo}>
                     <span className={styles.channelTitle}>Direct Email</span>
-                    <span className={styles.channelDetail}>nathasa.design@domain.com</span>
+                    <span className={styles.channelDetail}>nathasakayesaa@gmail.com</span>
                   </div>
                 </div>
 
@@ -105,7 +105,7 @@ export default function Contact({ onOpenCvModal, onCopyEmail }: ContactProps) {
 
               {/* Instagram channel */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/nathasa.kayezz?rpxt=MTRxb25iaHFqenI2OA=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.channelCard}
@@ -116,7 +116,7 @@ export default function Contact({ onOpenCvModal, onCopyEmail }: ContactProps) {
                   </div>
                   <div className={styles.channelInfo}>
                     <span className={styles.channelTitle}>Instagram</span>
-                    <span className={styles.channelDetail}>@nathasa.design</span>
+                    <span className={styles.channelDetail}>@nathasa.kayezz</span>
                   </div>
                 </div>
 

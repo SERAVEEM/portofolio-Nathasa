@@ -35,7 +35,7 @@ export default function Navbar({ onOpenCvModal, onCopyEmail }: NavbarProps) {
           <div className={styles.logoMonogram}>N</div>
           <div className={styles.brandText}>
             <span className={styles.brandName}>NATHASA</span>
-            <span className={styles.brandRole}>Product & UI/UX</span>
+            <span className={styles.brandRole}></span>
           </div>
         </a>
 
@@ -64,7 +64,7 @@ export default function Navbar({ onOpenCvModal, onCopyEmail }: NavbarProps) {
             <LinkedinIcon />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/nathasa.kayezz?rpxt=MTRxb25iaHFqenI2OA=="
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialIconBtn}
@@ -126,7 +126,7 @@ export default function Navbar({ onOpenCvModal, onCopyEmail }: NavbarProps) {
               <LinkedinIcon />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/nathasa.kayezz?rpxt=MTRxb25iaHFqenI2OA=="
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialIconBtn}

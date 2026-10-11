@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './Hero.module.css';
-import { DownloadIcon, ArrowRightIcon, LinkedinIcon, InstagramIcon, MailIcon, StarIcon, SparklesIcon } from './Icons';
+import { DownloadIcon, ArrowRightIcon, GithubIcon, LinkedinIcon, InstagramIcon, MailIcon } from './Icons';
 import { getAssetPath } from '@/data/portfolioData';
 
 interface HeroProps {
@@ -15,21 +15,19 @@ export default function Hero({ onOpenCvModal, onCopyEmail }: HeroProps) {
   return (
     <section id="hero" className={styles.heroSection}>
       <div className={`container ${styles.heroGrid}`}>
-        {/* Left Column: Headlines & CTA */}
+        {/* Left Column: Greeting, Name, Role & CTAs */}
         <div className={styles.heroContent}>
-          <div className={styles.statusPill}>
-            <span className={styles.statusDot} />
-            <span>Lorem Ipsum Dolor Sit • Available for Q4 2026</span>
+
+          <div className={styles.headingGroup}>
+            <span className={styles.greetingText}>Hi, I&apos;m</span>
+            <h1 className={styles.nameHeadline}>
+              <span className={styles.maroonGradientText}>Nathasa Bintang Kayesa</span>
+            </h1>
+            <h2 className={styles.roleSubheadline}>Digital Product Designer &amp; UI/UX Specialist</h2>
           </div>
 
-          <h1 className={styles.headline}>
-            Lorem ipsum dolor sit amet,{' '}
-            <span className={styles.maroonGradientText}>consectetur adipiscing</span> elit
-            sed do eiusmod tempor.
-          </h1>
-
           <p className={styles.subheadline}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            I create modern, responsive, and animated web experiences with smooth animations and exceptional user experience.
           </p>
 
           <div className={styles.ctaGroup}>
@@ -37,94 +35,79 @@ export default function Hero({ onOpenCvModal, onCopyEmail }: HeroProps) {
               type="button"
               onClick={onOpenCvModal}
               className={styles.primaryCta}
-              aria-label="Get My CV"
+              aria-label="Download CV"
             >
               <DownloadIcon />
-              <span>Get My CV</span>
+              <span>Download CV</span>
             </button>
 
-            <a href="#projects" className={styles.secondaryCta}>
-              <span>Explore My Projects</span>
+            <a href="#contact" className={styles.secondaryCta}>
+              <span>Contact Me</span>
               <ArrowRightIcon />
             </a>
           </div>
 
           <div className={styles.socialRow}>
-            <span className={styles.socialLabel}>Connect:</span>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialIconBtn}
+              aria-label="GitHub Profile"
+              title="GitHub"
+            >
+              <GithubIcon />
+            </a>
             
             <a
               href="https://www.linkedin.com/in/nathasa-bintang-kayesa-0b2891325/"
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.socialPill}
+              className={styles.socialIconBtn}
               aria-label="LinkedIn Profile"
+              title="LinkedIn"
             >
               <LinkedinIcon />
-              <span>LinkedIn</span>
             </a>
 
             <a
-              href="https://instagram.com/nathasa.kayezz?rpxt=MTRxb25iaHFqenI2OA==/"
+              href="https://www.instagram.com/nathasa.kayezz?rpxt=MTRxb25iaHFqenI2OA=="
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.socialPill}
+              className={styles.socialIconBtn}
               aria-label="Instagram Profile"
+              title="Instagram"
             >
               <InstagramIcon />
-              <span>Instagram</span>
             </a>
 
             <button
               type="button"
               onClick={onCopyEmail}
-              className={styles.socialPill}
+              className={styles.socialIconBtn}
               title="Click to copy email address"
               aria-label="Copy Email"
             >
               <MailIcon />
-              <span>Copy Email</span>
             </button>
           </div>
         </div>
 
-        {/* Right Column: Floating Profile Glass Showcase */}
+        {/* Right Column: Circular Avatar Showcase */}
         <div className={styles.showcaseWrapper}>
-          <div className={styles.showcaseAura} />
+          <div className={styles.glowingRingBackground} />
+          <div className={styles.orbitRing} />
           
-          <div className={styles.profileCard}>
-            <div className={styles.floatingBadgeTop}>
-              <StarIcon />
-              <span>99% Client Satisfaction</span>
-            </div>
-
-            <div className={styles.imageFrame}>
+          <div className={styles.avatarCircularContainer}>
+            <div className={styles.circularImageWrapper}>
               <Image
-                src={getAssetPath("/nathasa-avatar.jpg")}
-                alt="Nathasa - Digital Product Designer"
-                width={500}
-                height={500}
+                src={getAssetPath("/foto nat.jpg")}
+                alt="Nathasa Bintang Kayesa"
+                width={420}
+                height={420}
                 priority
-                className={styles.profileImage}
+                className={styles.avatarImage}
               />
-            </div>
-
-            <div className={styles.floatingBadgeBottom}>
-              <SparklesIcon />
-              <span>5+ Years Design Exp</span>
-            </div>
-
-            <div className={styles.profileMeta}>
-              <div className={styles.profileHeader}>
-                <div className={styles.profileName}>Nathasa</div>
-                <div className={styles.profileHandle}>@nathasa.design</div>
-              </div>
-
-              <div className={styles.specialtyPills}>
-                <span className={styles.tagPill}>UI/UX Design</span>
-                <span className={styles.tagPill}>Design Systems</span>
-                <span className={styles.tagPill}>Prototyping</span>
-                <span className={styles.tagPill}>Motion</span>
-              </div>
             </div>
           </div>
         </div>
@@ -132,3 +115,4 @@ export default function Hero({ onOpenCvModal, onCopyEmail }: HeroProps) {
     </section>
   );
 }
+
