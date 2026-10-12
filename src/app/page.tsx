@@ -35,13 +35,7 @@ export default function Home() {
   };
 
   const handleDownloadCv = () => {
-    showToast("Downloading Nathasa's CV (PDF)...");
-    const link = document.createElement("a");
-    link.href = `${process.env.NEXT_PUBLIC_BASE_PATH || '/portofolio-Nathasa'}/CV_Nathasa_Bintang_Kayesa.pdf`;
-    link.download = "CV_Nathasa_Bintang_Kayesa.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open("https://drive.google.com/file/d/1pQhAk8FIrzUl9idzs1U2m05f3s6QT1Ze/view?usp=drive_link", "_blank", "noopener,noreferrer");
   };
 
   return (

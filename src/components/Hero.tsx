@@ -19,11 +19,10 @@ export default function Hero({ onOpenCvModal, onCopyEmail }: HeroProps) {
         <div className={styles.heroContent}>
 
           <div className={styles.headingGroup}>
-            <span className={styles.greetingText}>Hi, I&apos;m</span>
+            <span className={styles.greetingText}>Hi, I&apos;m Nathasa Bintang Kayesa 👋</span>
             <h1 className={styles.nameHeadline}>
-              <span className={styles.maroonGradientText}>Nathasa Bintang Kayesa</span>
+              <span className={styles.maroonGradientText}>Digital Product Designer &amp; UI/UX Specialist</span>
             </h1>
-            <h2 className={styles.roleSubheadline}>Digital Product Designer &amp; UI/UX Specialist</h2>
           </div>
 
           <p className={styles.subheadline}>
