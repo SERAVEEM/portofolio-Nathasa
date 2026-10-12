@@ -21,12 +21,12 @@ export default function Hero({ onOpenCvModal, onCopyEmail }: HeroProps) {
           <div className={styles.headingGroup}>
             <span className={styles.greetingText}>Hi, I&apos;m Nathasa Bintang Kayesa 👋</span>
             <h1 className={styles.nameHeadline}>
-              <span className={styles.maroonGradientText}>Digital Product Designer &amp; UI/UX Specialist</span>
+              <span className={styles.maroonGradientText}>Cybersecurity &amp; UI/UX</span>
             </h1>
           </div>
 
           <p className={styles.subheadline}>
-            I create modern, responsive, and animated web experiences with smooth animations and exceptional user experience.
+            I test the security of web applications and design the experiences around them.
           </p>
 
           <div className={styles.ctaGroup}>
